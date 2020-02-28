@@ -1,0 +1,247 @@
+/*主页面右侧登录区域*/
+.loginBox{
+    position: absolute;
+    right:0;
+    top:0;
+    width: 264px;
+    height: 100%;
+    background: url(../upload/loginBg.png) -13px 0 ;
+}
+/*动态logo*/
+.loginBox_logo{
+    position: absolute;
+    top:0;
+    left:50%;
+    transform: translateX(-50%);
+    width:200px;
+    height:220px;
+    background: url(../upload/loginLogoEffect.webp) no-repeat 0 -55px;
+    background-size: 110% 110%;
+}
+.loginBox_logopic{
+    position: absolute;
+    bottom: 40px;
+    left:50%;
+    transform: translateX(-50%);
+    width: 86px;
+    height: 92px;
+    background: url(../upload/loginLogo.png) no-repeat;
+}
+
+/*QQ登录按钮*/
+.loginBox_qqLogin{
+    display: none;
+    position: absolute;
+    top:296px;
+    left: 50%;
+    transform: translateX(-50%);
+    width:210px;
+    height: 52px;
+    background: url("../upload/sprit1.png")no-repeat -230px -770px;
+    /*-230px -825px*/
+}
+.loginBox_qqLogin2{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url("../upload/sprit1.png")no-repeat -230px -825px;
+    opacity: 0;
+    transition:all .2s linear;
+}
+.loginBox_qqLogin2:hover{
+    opacity: 1;
+}
+/*微信登录按钮*/
+.loginBox_wxLogin{
+    display: none;
+    position: absolute;
+    top:366px;
+    left: 50%;
+    transform: translateX(-50%);
+    width:210px;
+    height: 52px;
+    background:url("../upload/sprit1.png")no-repeat 0 -770px;
+    /*0 -825px*/
+}
+.loginBox_wxLogin2{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url("../upload/sprit1.png")no-repeat 0 -825px;
+    opacity: 0;
+    transition:all .2s linear;
+}
+.loginBox_wxLogin2:hover{
+    opacity: 1;
+}
+/*登录入口*/
+.loginBox_login{
+    position: absolute;
+    top:228px;
+    left:20px;
+    width:228px;
+    height: 450px;
+    /*background: #ff0414;*/
+}
+.loginBox_login_list{
+    width: 100%;
+    /*background: #ff9999;*/
+}
+/*登录入口tab表头*//*:qq_on:-240px -952px wx_on:-470 -852*/
+.loginBox_login_list li{
+    float: left;
+    width: 114px;
+    height: 34px;
+    background: url("../upload/sprit1.png") no-repeat -240px -952px;
+    cursor: pointer;
+}
+/*qq登录off状态*/
+.loginBox_login_list .list_qq_off{
+    background-position:-120px -952px;
+    opacity: .5;
+    transition: all .2s linear;
+}
+/*qq登录off状态：hover*/
+.loginBox_login_list .list_qq_off:hover{
+    opacity: 1;
+}
+/*wx登录on状态*/
+.loginBox_login_list .list_wx_on{
+    background-position:-470px -852px;
+}
+/*wx登录off状态*/
+.loginBox_login_list .list_wx_off{
+    background-position:-470px -812px;
+    opacity: .5;
+    transition: all .2s linear;
+}
+/*wx登录off状态：hover*/
+.loginBox_login_list .list_wx_off:hover{
+    opacity: 1;
+}
+
+/*登录入口tab内容*/
+.loginBox_login_con{
+    position: absolute;
+    bottom:0;
+    width: 100%;
+    height: 405px;
+    /*background: #fffbf4;*/
+}
+/*li(1)  qq登录输入框背景*/
+.con_user{
+    position: absolute;
+    left: 50%;
+    top: 10px;
+    transform: translateX(-50%);
+    width:213px;
+    height: 111px;
+    background: url("../upload/inputBg.png");
+}
+.con_user a{
+    position: absolute;
+    left: 180px;
+    top:25px;
+    width: 20px;
+    height: 20px;
+    background: url("../upload/sprit1.png")no-repeat -6px -434px;
+    cursor: pointer;
+}
+.con_user a:hover{
+    background-position: -26px -434px;
+}
+
+
+/*li(1)  qq登录---username*/
+.userName,
+.userPwd{
+    position: absolute;
+    left: 15px;
+    top: 20px;
+    width:70%;
+    height:20px;
+    background: transparent;
+    color: #b1aea4;
+    font-size:12px;
+    border: 0;
+}
+/*li(1)  qq登录---userpwd*/
+.userPwd{
+    top:85px;
+}
+
+.remember_userName{
+    position: absolute;
+    left: 15px;
+    top:140px;
+    cursor: pointer;
+}
+.remember_readMe{
+    position: absolute;
+    left: 15px;
+    top:175px;
+    font-size:12px;
+    color: #9a9586;
+    cursor: pointer;
+}
+.remember_userName i,
+.remember_readMe i
+{
+    float: left;
+    width:20px;
+    height: 18px;
+    background: url("../upload/sprit1.png") no-repeat -301px -2px;
+}
+.remember_userName p,
+.remember_readMe p{
+    float: left;
+    margin-left:5px;
+    font-size:13px;
+    font-weight: 600;
+    color: #9a9586;
+    opacity:.7;
+    transition: all .2s linear;
+}
+.remember_userName p:hover,
+.remember_readMe p:hover{
+    opacity:1;
+}
+
+.agreement{
+    position: absolute;
+    top: 195px;
+    left: 38px;
+    font-size:12px;
+    color: #9a9586;
+    opacity:.7;
+}
+.agreement a{
+    font-size:12px;
+    font-weight: 600;
+    color: #9a9586;
+    border-bottom: 2px solid #9a9586;
+}
+
+
+/*版本号*/
+.loginBox_versionNum{
+    position: absolute;
+    bottom:72px;
+    width: 100%;
+    text-align: center;
+    color: #5a626a;
+    font-size: 12px;
+    user-select:none;
+}
+/*左下角“详细信息”按钮*/
+.learnMore{
+    position: absolute;
+    left:45px;
+    bottom:80px;
+    width: 120px;
+    height: 35px;
+    background: url("../upload/sprit1.png") no-repeat 0 -456px;
+}
+.learnMore:hover{
+    background-position: 0 -496px;
+}
