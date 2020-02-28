@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>英雄联盟-LOL-网页端</title>
+    <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
@@ -26,19 +27,57 @@
             <div class="loginBox_logopic"></div>
         </div>
         <!--QQ登录按钮-->
-        <a href="#" class="loginBox_qqLogin"></a>
+        <a href="#" class="loginBox_qqLogin">
+            <i class="loginBox_qqLogin2"></i>
+        </a>
         <!--微信登录按钮-->
-        <a href="#" class="loginBox_wxLogin"></a>
+        <a href="#" class="loginBox_wxLogin">
+            <i class="loginBox_wxLogin2"></i>
+        </a>
+        <!--登录区域-->
+        <div class="loginBox_login">
+            <!--登录入口tab表头-->
+            <div class="loginBox_login_list">
+                <ul>
+                    <li class="list_qq_on"></li>
+                    <li class="list_wx_off"></li>
+                </ul>
+            </div>
+            <!--登录入口tab内容-->
+            <div class="loginBox_login_con">
+                <ul>
+                    <li>
+                        <div class="con_user">
+                            <a href="#"></a>
+                            <input class="userName" type="text">
+                            <input class="userPwd" type="password">
+                        </div>
+                        <div class="remember_userName"><i></i><p>记住账号</p></div>
+                        <div class="remember_readMe">
+                            <i></i>
+                            <p>我已详细阅读并同意</p>
+
+                        </div>
+                        <p class="agreement"><a href="#">腾讯游戏用户协议&nbsp;</a>和<a href="#">&nbsp;隐私保护指引</a></p>
+                    </li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
         <!--版本号-->
         <p class="loginBox_versionNum">版本号：4.1.6.8</p>
-        <!--导航栏-->
-        <ul class="loginBox_bottomNav">
-            <li><a href="#">官网</a></li>
-            <li><a href="#">客服</a></li>
-            <li><a href="#">充值</a></li>
-            <li><a href="#">注册</a></li>
-        </ul>
+
+
+
     </div>
+    <!--导航栏-->
+    <ul class="bottomNav">
+        <li><a href="#">官网</a></li>
+        <li><a href="#">客服</a></li>
+        <li><a href="#">充值</a></li>
+        <li><a href="#">注册</a></li>
+    </ul>
     <!--左下角“详细信息”按钮-->
     <a class="learnMore" href="#"></a>
     <!--许可链接-->
