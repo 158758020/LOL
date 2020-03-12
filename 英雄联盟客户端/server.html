@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/server.css">
+</head>
+<body oncontextmenu="window.event.returnValue=false" onselectstart="return false" onpaste="return false" οndragstart="return false;" >
+<div class="main">
+    <!--音频-->
+    <!--1.bgm音频-->
+    <audio id="bgm" src="media/sound.mp3" autoplay loop></audio>
+    <!--动态海报-->
+    <video src="media/server_page.webm" autoplay loop></video>
+    <!--mask-->
+    <!--主页面左上角的中文logo-->
+    <div class="logo_cn"></div>
+    <div class="short_line"></div>
+    <!--主页面右上角的工具条-->
+    <ul class="tool">
+        <li class="tool_back"></li>
+        <li class="tool_voice"></li>
+        <li class="tool_small"></li>
+        <li class="tool_close"></li>
+    </ul>
+    <!--左侧服务器列表-->
+    <div class="server_list">
+        <ul class="dianxin">
+            <li class="cur"><span>艾欧尼亚</span><i></i></li>
+            <li><span>祖安</span><i></i></li>
+            <li><span>诺克萨斯</span><i></i></li>
+            <li><span>班德尔城</span><i></i></li>
+            <li><span>皮尔特沃夫</span><i></i></li>
+            <li><span>战争学院</span><i></i></li>
+            <li><span>巨神峰</span><i></i></li>
+            <li><span>雷瑟守备</span><i></i></li>
+            <li><span>裁决之地</span><i></i></li>
+            <li><span>黑色玫瑰</span><i></i></li>
+            <li><span>暗影岛</span><i></i></li>
+            <li><span>钢铁烈阳</span><i></i></li>
+            <li><span>水晶之痕</span><i></i></li>
+            <li><span>均衡教派</span><i></i></li>
+            <li><span>影流</span><i></i></li>
+            <li><span>守望之海</span><i></i></li>
+            <li><span>征服之海</span><i></i></li>
+            <li><span>卡拉曼达</span><i></i></li>
+            <li><span>皮城警备</span><i></i></li>
+        </ul>
+        <ul class="wangtong">
+            <li><span>比尔吉沃特</span><i></i></li>
+            <li><span>德玛西亚</span><i></i></li>
+            <li><span>弗雷尔卓德</span><i></i></li>
+            <li><span>无畏先锋</span><i></i></li>
+            <li><span>恕瑞玛</span><i></i></li>
+            <li><span>扭曲丛林</span><i></i></li>
+            <li><span>巨龙之巢</span><i></i></li>
+        </ul>
+        <ul class="other">
+            <li><span>教育网专区</span><i></i></li>
+        </ul>
+        <ul class="quanwang">
+            <li><span>男爵领域</span><i></i></li>
+            <li><span>峡谷之巅</span><i></i></li>
+        </ul>
+    </div>
+    <!--右侧服务器图标内容-->
+    <div class="server_con">
+        <div class="server_con_top">
+            <ul class="serverIcon">
+                <li class="cur"><img src="img/BIG_1001.png" alt=""></li>
+                <li><img src="img/BIG_1002.png" alt=""></li>
+                <li><img src="img/BIG_1003.png" alt=""></li>
+                <li><img src="img/BIG_1004.png" alt=""></li>
+                <li><img src="img/BIG_1005.png" alt=""></li>
+                <li><img src="img/BIG_1006.png" alt=""></li>
+                <li><img src="img/BIG_1007.png" alt=""></li>
+                <li><img src="img/BIG_1008.png" alt=""></li>
+                <li><img src="img/BIG_1009.png" alt=""></li>
+                <li><img src="img/BIG_1010.png" alt=""></li>
+                <li><img src="img/BIG_1011.png" alt=""></li>
+                <li><img src="img/BIG_1012.png" alt=""></li>
+                <li><img src="img/BIG_1013.png" alt=""></li>
+                <li><img src="img/BIG_1014.png" alt=""></li>
+                <li><img src="img/BIG_1015.png" alt=""></li>
+                <li><img src="img/BIG_1016.png" alt=""></li>
+                <li><img src="img/BIG_1017.png" alt=""></li>
+                <li><img src="img/BIG_1018.png" alt=""></li>
+                <li><img src="img/BIG_1019.png" alt=""></li>
+                <li><img src="img/BIG_1020.png" alt=""></li>
+                <li><img src="img/BIG_1021.png" alt=""></li>
+                <li><img src="img/BIG_1022.png" alt=""></li>
+                <li><img src="img/BIG_1023.png" alt=""></li>
+                <li><img src="img/BIG_1024.png" alt=""></li>
+                <li><img src="img/BIG_1025.png" alt=""></li>
+                <li><img src="img/BIG_1026.png" alt=""></li>
+                <li><img src="img/BIG_1027.png" alt=""></li>
+                <li><img src="img/BIG_1028.png" alt=""></li>
+                <li><img src="img/BIG_1029.png" alt=""></li>
+            </ul>
+            <div class="circleMask"></div>
+            <div class="nameMask">
+                <h1>艾欧尼亚</h1>
+                <p><span>网速良好(31ms)</span><i></i></p>
+            </div>
+            <a class="toLeft" href="javascript:;"><i></i></a>
+            <a class="toRight" href="javascript:;"><i></i></a>
+
+
+        </div>
+        <a class="server_con_bottom" href="javascript:;"><i></i></a>
+    </div>
+    <!--右上角全网大区和上次登录-->
+    <div class="smallIcon">
+        <div class="small_quanwang cur"><img src="img/SMALL_1028.png" alt=""><i></i><span>男爵领域</span></div>
+        <div class="small_lastTime"><img src="img/SMALL_1002.png" alt=""><i></i><span>祖安</span></div>
+    </div>
+    <!--右下角服务器列表按钮-->
+    <div class="moreServers"><i></i></div>
+
+
+
+    <!--导航栏-->
+    <ul class="bottomNav">
+        <li><a href="#">官网</a></li>
+        <li><a href="#">客服</a></li>
+        <li><a href="#">充值</a></li>
+        <li><a href="#">注册</a></li>
+    </ul>
+    <!--许可链接-->
+    <a class="admin" href="#">粤网文 [2017]6138-2566号</a>
+    <!--最下面的版权声明-->
+    <div class="copyright"></div>
+</div>
+
+<script src="js/tools.js"></script>
+</body>
+</html>

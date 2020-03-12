@@ -9,6 +9,11 @@ a{
     text-decoration: none;
     color: #08535e;
 }
+i{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
 /*主体*/
 .main{
     position: relative;
@@ -26,6 +31,8 @@ video{
     width: 1280px;
     height: 768px;
 }
+/*音频*/
+
 /*主页面左上角的中文logo*/
 .logo_cn{
     position: absolute;
@@ -34,6 +41,7 @@ video{
     width: 148px;
     height: 44px;
     background: url("../upload/sprit1.png")no-repeat -138px -5px;
+    z-index: 999;
 }
 .short_line{
     position: absolute;
@@ -55,25 +63,21 @@ video{
     margin:10px 6px;
     width: 12px;
     height: 10px;
-    background:url("../upload/sprit1.png")no-repeat -44px -2px;
+    background:url("../upload/sprit1.png")no-repeat -74px -2px;
     cursor: pointer;
-    transition: all .2s linear;
+    transition: opacity .2s linear;
     opacity: .7;
 }
 
 .tool_voice{
     width:14px;
 }
-.tool_voice:hover,
-.tool_voice2:hover,
-.tool_small:hover,
-.tool_close:hover
-{
+[class^="tool_"]:hover{
     opacity: 1;
 }
 .tool_voice2{
     width:14px;
-    background-position: -74px -2px;
+    background-position:-44px -2px;
 }
 
 .tool_small{
@@ -83,7 +87,11 @@ video{
 .tool_close{
     background-position:  -17px -17px;
 }
-
+.tool_back{
+    width: 12px;
+    height: 11px;
+    background: url("../upload/sprit1.png") no-repeat -12px -240px;
+}
 /*许可证明*/
 .admin{
     display: block;

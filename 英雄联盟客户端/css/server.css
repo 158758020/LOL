@@ -1,0 +1,347 @@
+/*左侧服务器列表*/
+.server_list {
+    position: absolute;
+    left: -872px;
+    top: 0;
+    width: 872px;
+    height: 725px;
+    background: url("../upload/moreServersBg.png") no-repeat;
+    opacity: 0;
+}
+/*设置li的统一样式*/
+.server_list li {
+    float: left;
+    position: relative;
+    width: 134px;
+    height: 42px;
+    margin:0 15px 8px 0;
+    background: url("../upload/sprit1.png") no-repeat -353px -228px;
+    cursor: pointer;
+}
+/*信号状态*/
+.server_list li::before {
+    content: "";
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    width: 16px;
+    height: 17px;
+    background: url("../upload/sprit1.png") no-repeat -1px -401px;
+    z-index: 10;
+}
+/*服务器名称*/
+.server_list li span{
+    position: absolute;
+    left: 12px;
+    top: 0;
+    width: 122px;
+    line-height: 42px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 15px;
+    color: #c0b387;
+    transition: all .2s;
+    z-index: 999;
+}
+/*高亮背景*/
+.server_list li i{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("../upload/sprit1.png") no-repeat -353px -285px;
+    opacity: 0;
+    transition: all .2s;
+}
+.server_list li:hover i{
+    opacity: 1;
+}
+.server_list li:hover span{
+    color: #fff1b2;
+}
+/*当前选中的服务器样式*/
+.server_list .cur i{
+    opacity: 1;
+}
+.server_list .cur span{
+    color: #fff1b2;
+}
+/*服务器统一样式*/
+.dianxin,
+.wangtong,
+.other,
+.quanwang{
+    position: absolute;
+    width: 725px;
+    left: 30px;
+}
+.dianxin::before,
+.wangtong::before,
+.other::before,
+.quanwang::before{
+    position: absolute;
+    left: 5px;
+    top: -22px;
+    font-size:13px;
+    font-weight:500;
+    color: #9a9485;
+}
+/*电信服务器*/
+.dianxin {
+    top: 207px;
+}
+.dianxin::before{
+    content: '电信';
+}
+/*网通服务器*/
+.wangtong {
+    top: 501px;
+}
+.wangtong::before{
+    content: "网通";
+}
+/*其他服务器*/
+.other{
+    top: 646px;
+}
+.other::before{
+    content: "其他";
+}
+/*全网服务器*/
+.quanwang {
+    top: 112px;
+}
+.quanwang::before{
+    content: "全网络大区";
+}
+/*右侧服务器区域*/
+/*容器*/
+.server_con {
+    position: absolute;
+    left: 645px;
+    top: 95px;
+    width: 560px;
+    height: 563px;
+    /*background: #ff9999;*/
+}
+/*容器上部分的图标区域*/
+.server_con_top {
+    width: 100%;
+    height: 90%;
+    background: url("../upload/serverIconBg.png") no-repeat;
+    background-size: 100% auto;
+}
+/*每一个图层*/
+.serverIcon li{
+    position: absolute;
+    left: 57px;
+    top: -19px;
+    width: 450px;
+    height: 550px;
+    transform: scale(0.01);
+    transition: scale .3s ease-in-out;
+}
+/*当前图层*/
+.serverIcon li.cur{
+    transform:scale(1);
+    z-index: 2;
+}
+/*圆形遮罩*/
+.circleMask{
+    position: absolute;
+    left: 80px;
+    top: 68px;
+    width: 400px;
+    height: 400px;
+    border-radius:50%;
+    background: transparent;
+    cursor: pointer;
+    z-index: 3;
+}
+/*文字遮罩*/
+.nameMask{
+    position: absolute;
+    left: 50%;
+    top: 380px;
+    transform: translateX(-50%);
+    width: 334px;
+    height: 88px;
+    background: url("../upload/serverIconMask.png")no-repeat ;
+    background-size:100% 100%;
+    z-index: 999;
+}
+.nameMask h1{
+    margin-top: 10px;
+    font-style: italic;
+    text-align: center;
+    color: #fff1b2;
+}
+.nameMask p{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width:120px;
+}
+.nameMask span{
+    font-size:12px;
+    line-height:17px;
+    color: #289f68;
+}
+.nameMask i{
+    width: 16px;
+    height: 17px;
+    background: url("../upload/sprit1.png") no-repeat -1px -401px;
+}
+/*左右箭头*/
+.toLeft{
+    position: absolute;
+    left: 10px;
+    top: 238px;
+    width:32px;
+    height: 61px;
+    background: url("../upload/sprit1.png") no-repeat -511px -234px ;
+}
+.toLeft i{
+    background: url("../upload/sprit1.png") no-repeat -511px -301px ;
+    opacity: 0;
+    transition: opacity .2s;
+}
+.toLeft i:hover{
+    opacity: 1;
+}
+.toRight{
+    position: absolute;
+    left: 518px;
+    top: 238px;
+    width:32px;
+    height: 61px;
+    background: url("../upload/sprit1.png") no-repeat -560px -234px ;
+}
+.toRight i{
+    background: url("../upload/sprit1.png") no-repeat -560px -301px ;
+    opacity: 0;
+    transition: opacity .2s;
+}
+.toRight i:hover{
+    opacity: 1;
+}
+/*容器下部分的按钮*/
+.server_con_bottom {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 330px;
+    height: 58px;
+    background: url("../upload/sprit1.png") no-repeat -3px -259px;
+    -moz-user-select: none;
+}
+.server_con_bottom i {
+    background: url("../upload/sprit1.png") no-repeat -3px -325px;
+    opacity: 0;
+    transition: opacity .3s;
+}
+.server_con_bottom i:hover {
+    opacity: 1;
+}
+
+/*右上角小图标*/
+.smallIcon{
+    position: absolute;
+    right: 15px;
+    top: 115px;
+    width: 85px;
+    height: 220px;
+}
+.small_lastTime{
+    margin-top: 56px;
+}
+/*图片居中*/
+.smallIcon img{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+}
+/*背景的共有样式*/
+.small_quanwang,
+.small_lastTime{
+    position: relative;
+    height: 85px;
+    background: url("../upload/sprit1.png") no-repeat -515px -460px;
+    cursor: pointer;
+}
+.smallIcon i{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("../upload/sprit1.png") no-repeat -515px -560px;
+    transition: opacity .2s ease;
+    opacity: 0;
+}
+.smallIcon img:hover+i{
+    opacity: 1;
+}
+/*选中状态*/
+.smallIcon .cur i {
+    opacity: 1;
+}
+/*服务器名称样式*/
+.smallIcon span{
+    position: absolute;
+    bottom:0;
+    width:100%;
+    text-align: center;
+    color: #6cc7d9;
+    font-size:12px;
+    z-index: 3;
+}
+/*标题内容：：before*/
+.small_quanwang::after,
+.small_lastTime::after{
+    content: '全网络大区';
+    position: absolute;
+    top: -25px;
+    width:100%;
+    text-align: center;
+    color: #b49862;
+    font-size:12px;
+}
+.small_lastTime::after{
+    content: '上次登录';
+}
+
+/*服务器列表*/
+.moreServers{
+    position: absolute;
+    right: 32px;
+    bottom: 55px;
+    width:142px;
+    height: 37px;
+    background: url("../upload/sprit1.png") no-repeat -425px -80px;
+    cursor: pointer;
+}
+.moreServers i{
+    background: url("../upload/sprit1.png") no-repeat -425px -117px;
+    opacity: 0;
+    transition: opacity .2s;
+}
+.moreServers i:hover,
+.moreServers i:active{
+    opacity: 1;
+}
+/*版本号*/
+.moreServers::before{
+    content: "版本号：4.1.7.0";
+    position: absolute;
+    top:-25px;
+    width:100%;
+    text-align: center;
+    font-size:12px;
+    color: #725726;
+}
+
+
+
+
+

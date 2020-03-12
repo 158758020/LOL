@@ -3,14 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>英雄联盟-LOL-网页端</title>
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
-<body>
+<body oncontextmenu="window.event.returnValue=false" onselectstart="return false" onpaste="return false">
 
 <div class="main">
+    <!--音频-->
+    <!--1.进入页面时的音频-->
+    <audio src="media/enterLol.mp3" autoplay></audio>
+    <audio id="bgm" src="media/sound.mp3" autoplay loop></audio>
     <!--动态海报-->
-    <video src="meida/login_page.webm" autoplay loop></video>
+    <video src="media/login_page.webm" autoplay loop></video>
+    <!--mask-->
+    <div class="mask"><div class="loginNotify">正在登陆...</div></div>
     <!--主页面左上角的中文logo-->
     <div class="logo_cn"></div>
     <div class="short_line"></div>
@@ -26,14 +33,16 @@
         <div class="loginBox_logo">
             <div class="loginBox_logopic"></div>
         </div>
-        <!--QQ登录按钮-->
-        <a href="#" class="loginBox_qqLogin">
-            <i class="loginBox_qqLogin2"></i>
-        </a>
-        <!--微信登录按钮-->
-        <a href="#" class="loginBox_wxLogin">
-            <i class="loginBox_wxLogin2"></i>
-        </a>
+        <!--登录入口按钮-->
+        <div class="loginBox_entrance">
+            <a href="#" class="loginBox_qqLogin">
+                <i></i>
+            </a>
+            <!--微信登录按钮-->
+            <a href="#" class="loginBox_wxLogin">
+                <i></i>
+            </a>
+        </div>
         <!--登录区域-->
         <div class="loginBox_login">
             <!--登录入口tab表头-->
@@ -46,29 +55,67 @@
             <!--登录入口tab内容-->
             <div class="loginBox_login_con">
                 <ul>
-                    <li>
-                        <div class="con_user">
-                            <a href="#"></a>
-                            <input class="userName" type="text">
-                            <input class="userPwd" type="password">
+                    <li style="display: block">
+                        <div class="qq_way1" style="display: block">
+                            <div class="con_user">
+
+                                <input class="userName" onkeyup="value=value.replace(/[^0-9]/g,'')" onpaste="value=value.replace(/[^0-9]/g,'')"                                                     oncontextmenu="value=value.replace(/[^0-9]/g,'')"  maxlength="11">
+                                <a class="historyBtn" href="#"></a>
+                                <div class="history"  data-mcs-theme="light-3">
+                                    <ul>
+
+                                    </ul>
+                                </div>
+                                <input class="userPwd" type="password" onselectstart="return false" maxlength="20">
+                            </div>
+                            <div class="remember_userName checked">
+                                <i></i>
+                                <p>记住账号</p>
+                            </div>
+                            <div class="remember_readMe checked">
+                                <i></i>
+                                <p>我已详细阅读并同意</p>
+                            </div>
+                            <p class="agreement"><a href="#">腾讯游戏用户协议&nbsp;</a>和<a href="#">&nbsp;隐私保护指引</a></p>
+
+                            <a class="enterGame1" href="#"><i></i></a>
+                            <a class="changeWay1" href="#"><i></i></a>
                         </div>
-                        <div class="remember_userName"><i></i><p>记住账号</p></div>
-                        <div class="remember_readMe">
+                        <div class="qq_way2" style="display: none;">
+                            <p class="txt">检测到您已登录QQ账号，请选择登录</p>
+                            <div class="qqUsers">
+                                <div class="cur">ysx(158758020)</div>
+                                <div>lxy(158758020)</div>
+                            </div>
+                            <div class="remember_readMe checked">
+                                <i></i>
+                                <p>我已详细阅读并同意</p>
+                            </div>
+                            <p class="agreement"><a href="#">腾讯游戏用户协议&nbsp;</a>和<a href="#">&nbsp;隐私保护指引</a></p>
+
+                            <a class="enterGame2" href="#"><i></i></a>
+                            <a class="changeWay2" href="#"><i></i></a>
+                        </div>
+                    </li>
+                    <li style="display: none">
+                        <p class="useWx">使用&nbsp;微信扫码&nbsp;安全登录</p>
+                        <div class="wxCode">
+                            <img src="img/wechatScanBack.png" alt="微信扫码登录" title="微信扫码登录">
+                            <a href="#"><i></i></a>
+                        </div>
+                        <div class="remember_readMe checked">
                             <i></i>
                             <p>我已详细阅读并同意</p>
-
                         </div>
                         <p class="agreement"><a href="#">腾讯游戏用户协议&nbsp;</a>和<a href="#">&nbsp;隐私保护指引</a></p>
+
+
                     </li>
-                    <li></li>
-                    <li></li>
                 </ul>
             </div>
         </div>
         <!--版本号-->
         <p class="loginBox_versionNum">版本号：4.1.6.8</p>
-
-
 
     </div>
     <!--导航栏-->
@@ -80,10 +127,18 @@
     </ul>
     <!--左下角“详细信息”按钮-->
     <a class="learnMore" href="#"></a>
+    <!--错误提示-->
+    <div class="notice"><div class="noAllowed"></div></div>
     <!--许可链接-->
-    <a class="admin" href="#" >粤网文 [2017]6138-2566号</a>
+    <a class="admin" href="#">粤网文 [2017]6138-2566号</a>
     <!--最下面的版权声明-->
     <div class="copyright"></div>
 </div>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="js/完美运动框架.js"></script>
+<script src="js/tools.js"></script>
+<script src="js/localStorage.js"></script>
+<script src="js/index.js"></script>
 </body>
 </html>
