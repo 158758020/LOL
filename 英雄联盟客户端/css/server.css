@@ -1,3 +1,14 @@
+/*动画组*/
+@keyframes listFadeIn {
+    0%{left:-872px;opacity:0}
+    50%{opacity:0.1}
+    100%{left: 0;opacity:1;}
+}
+@keyframes listFadeOut {
+    0%{left:0;opacity:1}
+    50%{opacity:0.1}
+    100%{left: -872px;opacity:0;}
+}
 /*左侧服务器列表*/
 .server_list {
     position: absolute;
@@ -7,6 +18,12 @@
     height: 725px;
     background: url("../upload/moreServersBg.png") no-repeat;
     opacity: 0;
+}
+.server_list.off{
+    animation: listFadeOut .3s linear forwards;
+}
+.server_list.show{
+    animation: listFadeIn .3s linear forwards;
 }
 /*设置li的统一样式*/
 .server_list li {
@@ -116,14 +133,22 @@
 /*右侧服务器区域*/
 /*容器*/
 .server_con {
+    /*widthh:560px;height:563px;*/
     position: absolute;
     left: 645px;
     top: 95px;
     width: 560px;
     height: 563px;
+    transform: scale(1.3);
+    opacity:0;
+    transition:all .2s;
     /*background: #ff9999;*/
 }
-/*容器上部分的图标区域*/
+.server_con.show{
+    transform: scale(1);
+    opacity:1;
+}
+    /*容器上部分的图标区域*/
 .server_con_top {
     width: 100%;
     height: 90%;
@@ -138,7 +163,7 @@
     width: 450px;
     height: 550px;
     transform: scale(0.01);
-    transition: scale .3s ease-in-out;
+    transition: transform .15s ease-in-out;
 }
 /*当前图层*/
 .serverIcon li.cur{
@@ -169,11 +194,16 @@
     background-size:100% 100%;
     z-index: 999;
 }
-.nameMask h1{
-    margin-top: 10px;
-    font-style: italic;
-    text-align: center;
-    color: #fff1b2;
+.nameMask li{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.nameMask img{
+    width: 200px;
+    margin: 5px 0 0 67px;
 }
 .nameMask p{
     display: flex;
@@ -233,7 +263,8 @@
     width: 330px;
     height: 58px;
     background: url("../upload/sprit1.png") no-repeat -3px -259px;
-    -moz-user-select: none;
+    user-select: none;
+    z-index: 999;
 }
 .server_con_bottom i {
     background: url("../upload/sprit1.png") no-repeat -3px -325px;
@@ -340,7 +371,6 @@
     font-size:12px;
     color: #725726;
 }
-
 
 
 
