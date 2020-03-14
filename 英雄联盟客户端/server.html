@@ -2,15 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>英雄联盟-选择服务器</title>
+    <link rel="shortcut icon" href="lol.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/server.css">
+
 </head>
 <body oncontextmenu="window.event.returnValue=false" onselectstart="return false" onpaste="return false" οndragstart="return false;" >
 <div class="main">
     <!--音频-->
     <!--1.bgm音频-->
     <audio id="bgm" src="media/sound.mp3" autoplay loop></audio>
+    <!--2.进入游戏音效-->
+    <audio id="enter" src="media/enterServer.mp3"></audio>
+    <!--3.选择服务器音效-->
+    <audio id="selectServer" src="media/selectServer.mp3"></audio>
     <!--动态海报-->
     <video src="media/server_page.webm" autoplay loop></video>
     <!--mask-->
@@ -100,25 +106,21 @@
             </ul>
             <div class="circleMask"></div>
             <div class="nameMask">
-                <h1>艾欧尼亚</h1>
+                <img src="img/name01.png" alt="">
                 <p><span>网速良好(31ms)</span><i></i></p>
             </div>
             <a class="toLeft" href="javascript:;"><i></i></a>
             <a class="toRight" href="javascript:;"><i></i></a>
-
-
         </div>
         <a class="server_con_bottom" href="javascript:;"><i></i></a>
     </div>
     <!--右上角全网大区和上次登录-->
     <div class="smallIcon">
-        <div class="small_quanwang cur"><img src="img/SMALL_1028.png" alt=""><i></i><span>男爵领域</span></div>
-        <div class="small_lastTime"><img src="img/SMALL_1002.png" alt=""><i></i><span>祖安</span></div>
+        <div class="small_quanwang"><img src="img/SMALL_1028.png" alt=""><i></i><span>男爵领域</span></div>
+        <div class="small_lastTime"><img src="" alt=""><i></i><span></span></div>
     </div>
     <!--右下角服务器列表按钮-->
     <div class="moreServers"><i></i></div>
-
-
 
     <!--导航栏-->
     <ul class="bottomNav">
@@ -132,7 +134,10 @@
     <!--最下面的版权声明-->
     <div class="copyright"></div>
 </div>
-
+<script src="js/startMove.js"></script>
 <script src="js/tools.js"></script>
+<script src="js/localStorage.js"></script>
+<script src="js/server.js"></script>
+
 </body>
 </html>
